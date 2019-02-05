@@ -39,5 +39,5 @@ jobs:
           command: |
             echo $dockerpassword | docker login --username dantaylor --password-stdin
             [[ $CIRCLE_BRANCH = "master" ]] && TAG="latest" || TAG=$CIRCLE_BRANCH
-            docker tag app "observian/dotnet-gcloud:${TAG}"
-            docker push "observian/dotnet-gcloud:${TAG}"
+            docker tag app "observian/docker-gcloud:${TAG}"
+            docker push "observian/docker-gcloud:${TAG}"
